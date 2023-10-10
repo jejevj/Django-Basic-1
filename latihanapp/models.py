@@ -14,8 +14,13 @@ class ListMahasiswa(models.Model):
     nim = models.CharField(max_length=10)
     tgl_lahir = models.DateField()
     
+    
 class ProdukItem(models.Model):
     nama_produk = models.CharField(max_length=200)
     harga = models.CharField(max_length=100)
     
-    
+
+class BuahItem(models.Model):
+    nama_buah = models.CharField(max_length=200)
+    harga = models.CharField(max_length=100)
+        

@@ -7,3 +7,5 @@ admin.site.register(TodoItem)
 admin.site.register(ListMahasiswa)
 
 admin.site.register(ProdukItem)
+
+admin.site.register(BuahItem)

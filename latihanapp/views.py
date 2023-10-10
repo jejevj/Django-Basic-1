@@ -16,3 +16,8 @@ def listMahasiswa(request):
 def produk(request):
     items = ProdukItem.objects.all()
     return render(request, 'produk.html', {"produk":items})
+
+
+def buah(request):
+    items = BuahItem.objects.all()
+    return render(request, 'buah.html', {"buah":items})
