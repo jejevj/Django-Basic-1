@@ -5,7 +5,7 @@ from django.db import models
 
 class TodoItem(models.Model):
     title = models.CharField(max_length=225)
-    completed = models.BooleanField(default=False)
+    diskon = models.BooleanField(default=False)
     
 
 class ListMahasiswa(models.Model):
@@ -13,5 +13,9 @@ class ListMahasiswa(models.Model):
     kelas = models.CharField(max_length=20)
     nim = models.CharField(max_length=10)
     tgl_lahir = models.DateField()
+    
+class ProdukItem(models.Model):
+    nama_produk = models.CharField(max_length=200)
+    harga = models.CharField(max_length=100)
     
     

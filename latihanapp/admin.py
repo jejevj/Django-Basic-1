@@ -5,3 +5,5 @@ from .models import *
 admin.site.register(TodoItem)
 
 admin.site.register(ListMahasiswa)
+
+admin.site.register(ProdukItem)

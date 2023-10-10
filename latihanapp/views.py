@@ -12,3 +12,7 @@ def todos(request):
 def listMahasiswa(request):
     items = ListMahasiswa.objects.all()
     return render(request, 'listMahasiswa.html', {"mahasiswa":items})
+
+def produk(request):
+    items = ProdukItem.objects.all()
+    return render(request, 'produk.html', {"produk":items})

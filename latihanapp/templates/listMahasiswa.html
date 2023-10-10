@@ -3,7 +3,8 @@
 <h2>Mahasiswa app</h2>
 <ul>
 {% for mhs in mahasiswa%}
-    <li>{{ mhs.nama}}</li>
+    <li>{{ mhs.nama}} - {{ mhs.nim}} - {{ mhs.kelas}}</li>
+    {% comment %} <li></li> {% endcomment %}
 {% endfor %}
     </ul>
 {% endblock %}

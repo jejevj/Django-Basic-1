@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %} Produk {% endblock %} {% block content %}
+<h2>List Produk</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="https://yt3.googleusercontent.com/jd2qb7vNrYceenVj1yhiON6WFZmEf7Lqv1wrUGJF1MqcnQPBjAyBnxk7yN1Xs7zz7a34Q-1jhsw=s900-c-k-c0x00ffffff-no-rj" alt="Title" />
+        <div class="card-body">
+          <h4 class="card-title">Title</h4>
+          <p class="card-text">Text</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+    
+  <div class="row">
+    {% for prd in produk%}
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">{{ prd.nama_produk}}</h4>
+          <p class="card-text">{{ prd.harga}}</p>
+        </div>
+      </div>
+    </div>
+     <div class="col-md-4 mb-4">
+      <div class="card bg-dark text-white">
+        <div class="card-body">
+          <h4 class="card-title">{{ prd.nama_produk}}</h4>
+          <p class="card-text">{{ prd.harga}}</p>
+        </div>
+      </div>
+    </div>
+     <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">{{ prd.nama_produk}}</h4>
+          <p class="card-text">{{ prd.harga}}</p>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
