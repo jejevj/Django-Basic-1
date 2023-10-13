@@ -50,4 +50,5 @@ class KontenItem(models.Model):
         
     
 class article(models.Model): 
+    judul = models.CharField(max_length=200)
     content =  HTMLField()     
