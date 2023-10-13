@@ -10,5 +10,9 @@ urlpatterns = [
     
     path('produk/',views.produk,name="Daftar Produk"),
     
-    path('buah/',views.buah,name="Daftar Buah")
+    path('buah/',views.buah,name="Daftar Buah"),
+    
+    path('konten/',views.konten,name="Daftar Konten"),
+    
+    path('blog/',views.blog,name="Daftar Blog")
 ]

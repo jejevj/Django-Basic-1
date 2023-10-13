@@ -21,3 +21,13 @@ def produk(request):
 def buah(request):
     items = BuahItem.objects.all()
     return render(request, 'buah.html', {"buah":items})
+
+
+def konten(request):
+    items = KontenItem.objects.all()
+    return render(request, 'konten.html', {"konten":items})
+
+
+def blog(request):
+    items = article.objects.all()
+    return render(request, 'detail.html', {"konten":items})

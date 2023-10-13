@@ -9,3 +9,6 @@ admin.site.register(ListMahasiswa)
 admin.site.register(ProdukItem)
 
 admin.site.register(BuahItem)
+
+admin.site.register(KontenItem)
+admin.site.register(article)
