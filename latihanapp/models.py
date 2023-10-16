@@ -51,4 +51,14 @@ class KontenItem(models.Model):
     
 class article(models.Model): 
     judul = models.CharField(max_length=200)
-    content =  HTMLField()     
+    content =  HTMLField()   
+    created_at = models.DateField(auto_now=True)  
+    
+
+    
+class matakuliah(models.Model): 
+    kode_mata_kuliah = models.CharField(max_length=10)
+    nama_mata_kuliah = models.CharField(max_length=100)
+    sks = models.CharField(max_length=1)
+    # content =  HTMLField()   
+    created_at = models.DateField(auto_now=True)  

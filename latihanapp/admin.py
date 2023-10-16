@@ -12,3 +12,6 @@ admin.site.register(BuahItem)
 
 admin.site.register(KontenItem)
 admin.site.register(article)
+
+
+admin.site.register(matakuliah)

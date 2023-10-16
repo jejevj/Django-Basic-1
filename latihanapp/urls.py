@@ -14,5 +14,9 @@ urlpatterns = [
     
     path('konten/',views.konten,name="Daftar Konten"),
     
-    path('blog/',views.blog,name="Daftar Blog")
+    path('blog/',views.blog,name="Daftar Blog"),
+    
+    path('matkul/',views.matkul,name="Daftar Blog"),
+    
+    path('api-matkul',views.getMatkul)
 ]

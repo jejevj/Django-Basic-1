@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %} Home Page {% endblock %}
+{% block content %}
+<h2>Buah app</h2>
+<ul>
+{% for matkul in konten%}
+    <li>{{ matkul.nama_mata_kuliah}} - {{ matkul.sks}}</li>
+    {% comment %} <li></li> {% endcomment %}
+{% endfor %}
+    </ul>
+{% endblock %}

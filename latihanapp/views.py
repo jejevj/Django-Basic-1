@@ -1,6 +1,14 @@
 from django.shortcuts import render, HttpResponse
 from .models import *
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from rest_framework import serializers
 
+
+class MatakuliahSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = matakuliah
+        fields = '__all__'
 
 def home(request):
     return render(request, "home.html")
@@ -31,3 +39,15 @@ def konten(request):
 def blog(request):
     items = article.objects.all()
     return render(request, 'detail.html', {"konten":items})
+
+
+def matkul(request):
+    items = matakuliah.objects.all()
+    return render(request, 'matkul.html', {"konten":items})
+
+
+@api_view(['GET'])
+def getMatkul(request):
+    matkul = matakuliah.objects.all()
+    serializer = MatakuliahSerializer(matkul, many=True)
+    return Response(serializer.data)

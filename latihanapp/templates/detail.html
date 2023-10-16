@@ -4,6 +4,7 @@
 
     {% for kt in konten%}
         <h1> {{ kt.judul}} </h1>
+        <p> Dibuat pada: {{kt.created_at}}</p>
         {{ kt.content | safe}}
     {% endfor %}
 </div>
