@@ -18,5 +18,6 @@ urlpatterns = [
     
     path('matkul/',views.matkul,name="Daftar Blog"),
     
-    path('api-matkul',views.getMatkul)
+    path('api-matkul',views.getMatkul),
+    path('api/store-matkul',views.MatkulCreateView.as_view(), name='matkul-create'),
 ]

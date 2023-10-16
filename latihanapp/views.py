@@ -1,14 +1,10 @@
 from django.shortcuts import render, HttpResponse
 from .models import *
+from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from rest_framework import serializers
+from .serializers import *
 
-
-class MatakuliahSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = matakuliah
-        fields = '__all__'
 
 def home(request):
     return render(request, "home.html")
@@ -51,3 +47,7 @@ def getMatkul(request):
     matkul = matakuliah.objects.all()
     serializer = MatakuliahSerializer(matkul, many=True)
     return Response(serializer.data)
+
+class MatkulCreateView(generics.CreateAPIView):
+    queryset = matakuliah.objects.all()
+    serializer_class = MatakuliahSerializer
